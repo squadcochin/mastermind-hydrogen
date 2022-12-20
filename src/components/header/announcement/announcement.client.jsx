@@ -5,6 +5,7 @@ import './style.css';
 import Menu from "../topnavigation/Menu.client";
 
 export default function Announcement() {
+
     var settings = {
         dots: false,
         infinite: true,
@@ -28,10 +29,13 @@ export default function Announcement() {
             <div  className="mx-auto">
                 <h3 className="text-center h-12 flex items-center justify-center text-white font-semibold">Get your gifts before the holidays!</h3>
             </div>
+
     </Slider>
     
         </div>   
         <Menu/>    
       </div>
+
     );
+
   }
