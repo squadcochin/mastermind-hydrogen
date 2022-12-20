@@ -1,0 +1,22 @@
+.banner-container img{
+    min-height: 400px;
+}
+.banner-container .slick-prev {
+    left: 30px;
+    background: url(src/assets/banner-left-arrow.png)no-repeat;
+    height: 71px;
+    width: 94px;
+    z-index: 1;
+    background-size: contain;
+}
+.banner-container .slick-next {
+    right: 0;
+    background: url(src/assets/banner-right-arrow.png)no-repeat;
+    height: 71px;
+    width: 94px;
+    z-index: 1;
+    background-size: contain;
+}
+.banner-container .slick-prev::before, .slick-next::before{
+    display: none;
+}
