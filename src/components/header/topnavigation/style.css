@@ -13,7 +13,7 @@ input[type="text"]::placeholder {
     color: #1d4a6e;
     padding-left: 50px;
 }
-img{
+.home-head img{
     max-height: 47px;
     width: 100%;
 }
@@ -44,9 +44,6 @@ img{
     height:12px;
     width:11px;
 }
-.dropdown_column__menu{
-    display: none;
-}
 .main_nav {
     position: relative;
 }
@@ -61,6 +58,7 @@ img{
     color: #fff;
     padding: 20px;
     min-width: 200px;
+    display: none;
 }
 @media (max-width: 575px) { 
     .menu-icon span {
