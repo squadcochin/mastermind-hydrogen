@@ -1,4 +1,5 @@
 import './style.css';
+import logo from '../../../assets/header-logo.png'
 
 export default function Menu() {
     return (
@@ -10,7 +11,7 @@ export default function Menu() {
                       <div  className="nav1 ">
                          <ul  className="menu align_left sm:flex-row flex flex-col">
                             <li className="menu-item px-3.5">
-                              <a href="#"  className=" font-bold uppercase text-lg text-white">TOYS</a>
+                              <a href="#" className=" font-bold uppercase text-lg text-white">TOYS</a>
                               <div className="dropdown_column__menu">
                                  <ul className="dropdown_title">
                                     <li> <a>SHOP AGE</a></li>
@@ -30,7 +31,7 @@ export default function Menu() {
                               </div>
                             
                             </li>
-                            <li className="px-3.5"><a href="#"  className="font-bold uppercase text-lg text-white">Books</a></li>
+                            <li className="px-3.5"><a href="collections/books"  className="font-bold uppercase text-lg text-white">Books</a></li>
                             <li className="px-3.5"><a href="#"  className="font-bold uppercase text-lg text-white">Baby</a></li>
                          </ul>
                       </div>
@@ -42,7 +43,7 @@ export default function Menu() {
                    </div>
                 </div>
                 <div  className="logo logo--image"> 
-                  <a href="#" title="Mastermind Toys"> <img src="src/assets/header-logo.png"  className="secondary_logo lazyload" alt="Mastermind Toys" width="135" height="70" /></a>
+                  <a href="#" title="Mastermind Toys"> <img src={logo}  className="secondary_logo lazyload" alt="Mastermind Toys" width="135" height="70" /></a>
                 </div>
                 <div  className="basis-2/5 items-center hidden sm:flex"> 
                      <div className="search_container px-5" data-autocomplete-false="" >
