@@ -34,8 +34,7 @@ export default function Announcement() {
     </Slider>
     
         </div>   
-        <Menu/> 
-        <Bannerslider />   
+        <Menu/>        
       </div>
 
     );
