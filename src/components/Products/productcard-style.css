@@ -1,0 +1,7 @@
+.sale-box{
+    display: inline-block;
+}
+.product-card{
+    padding: 20px;
+    max-width: 300px;
+}
