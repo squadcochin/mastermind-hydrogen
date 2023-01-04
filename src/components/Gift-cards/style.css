@@ -1,0 +1,39 @@
+div.container {
+    margin: 0 auto;
+    padding: 20px 45px;
+    width: 100%;
+}
+.title-typ1 {
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: -1px;
+    color: #00b3e9;
+    font-weight: 700;
+    padding: 0 0 23px;
+    margin: 0 0 28px;
+    border-bottom: 1px solid #00b3e9;
+    text-transform: none;
+}
+.center{
+    text-align: center;
+}
+.header-bg {
+    padding: 23px 0 0px;
+    text-align: center;
+}
+.logo-bar{
+    display: flex;
+}
+@media (max-width: 767px){
+    .Giftcard .logo-bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    } 
+    .Giftcard .logo-bar__item {
+        width: 40%;
+        max-width: calc(40% - 0px);
+        margin: 10px;
+    }  
+  
+}

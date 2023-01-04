@@ -1,0 +1,23 @@
+.Shopcategory .logo-bar{
+    flex-wrap: wrap;
+}
+.Shopcategory .logo-bar__item {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: calc(20% - 0px);
+    width: calc(20% - 0px);
+    margin-top: 20px;
+}
+@media (max-width: 767px){
+    .Shopcategory .logo-bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    } 
+    .Shopcategory .logo-bar__item {
+        width: 40%;
+        max-width: calc(40% - 0px);
+        margin: 10px;
+    }  
+  
+}

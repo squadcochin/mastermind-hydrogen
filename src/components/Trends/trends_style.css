@@ -1,0 +1,23 @@
+
+.Trends .feature-section {
+    text-align: center;
+    float: left;
+    margin: 0 10px 20px;
+    position: relative;
+}
+.Trends .feature-section img{
+    border-radius: 20px;
+}
+
+@media (max-width: 767px){
+    .Trends .logo-bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    } 
+    .Trends .logo-bar__item {
+        width: 85%;
+        margin: 10px;
+    }  
+  
+}

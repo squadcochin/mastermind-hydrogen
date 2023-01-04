@@ -1,6 +1,6 @@
 import './style.css';
 
-export default function Footer (){
+export function Footer (){
 
   return(
      <div>
@@ -9,7 +9,7 @@ export default function Footer (){
         <div className="common-row clearfix"> 
 	        <div className="one-fifth column medium-down--one-whole  logo-grid" > 
 	            <div className="text-align--center mobile-center"> 
-				    <img  src="../../../assets/Logo.PNG" alt="Mastermind Toys" className="footer-logo lazyload appear"/>
+				    <img  src="https://cdn.shopify.com/s/files/1/0356/3539/6741/files/logo-color_410x.png" alt="Mastermind Toys" className="footer-logo lazyload appear"/>
 				</div> 
 				<div className="footer-social-icons text-align--center"> 
 				    <ul className="social_icons">
@@ -114,8 +114,8 @@ export default function Footer (){
 			</div>
 		</div>
 	</div>
-</footer>
-     </div>
+   </footer>
+ </div>
 
   );
 }
