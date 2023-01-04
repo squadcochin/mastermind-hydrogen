@@ -1,7 +1,7 @@
 
 import Checkbox from "../elements/checkbox.client";
 
-export default function Filter() {
+export default function Age() {
     const age = [ "24 – 36 months","3 years","4 years","5 years","6 years"];
                
 return(

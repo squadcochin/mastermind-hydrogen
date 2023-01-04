@@ -43,7 +43,7 @@ export default function Menu() {
                    </div>
                 </div>
                 <div  className="logo logo--image"> 
-                  <a href="#" title="Mastermind Toys"> <img src={logo}  className="secondary_logo lazyload" alt="Mastermind Toys" width="135" height="70" /></a>
+                  <a href="#" title="Mastermind Toys"> <img src={logo}  className="secondary_logo lazyload" alt="Mastermind Toys"/></a>
                 </div>
                 <div  className="basis-2/5 items-center hidden sm:flex"> 
                      <div className="search_container px-5" data-autocomplete-false="" >

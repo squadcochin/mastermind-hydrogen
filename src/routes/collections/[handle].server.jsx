@@ -8,7 +8,6 @@ export default function collections() {
             <Announcement />
             <Menu />
             <ProductListing />
-            <p>tedst</p>test
         </div>
     );
 }
