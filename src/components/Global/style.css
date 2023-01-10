@@ -244,3 +244,19 @@ img.footer-logo {
         display: block;
     }
 }
+.product-slider .slick-prev:before{
+    font-size: 30px;
+    opacity: 1;
+    color: black;
+}
+.product-slider .slick-next:after {
+    font-family: 'slick';
+    font-size: 30px;
+    line-height: 1;
+    opacity: 1;
+    color: rgb(0, 0, 0);
+    content: '←';
+}
+.product-slider .slick-next {
+    transform: rotate(177deg);
+}

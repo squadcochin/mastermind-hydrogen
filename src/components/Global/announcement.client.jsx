@@ -30,11 +30,11 @@ export function Announcement() {
               </h3>
             </div> 
           ))}  
-      </Slider>
-        </div>        
-
+        </Slider>
+        </div>  
       </div>
 
     );
 
   }
+
