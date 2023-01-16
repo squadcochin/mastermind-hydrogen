@@ -32,7 +32,7 @@ export default function Menu() {
                             
                             </li>
                             <li className="px-3.5"><a href="testcollections/books"  className="font-bold uppercase text-lg text-white">Books</a></li>
-                            <li className="px-3.5"><a href="collections/rings"  className="font-bold uppercase text-lg text-white">Rings</a></li>
+                            <li className="px-3.5"><a href="collections/history-books"  className="font-bold uppercase text-lg text-white">History Books</a></li>
                          </ul>
                       </div>
                    </div>

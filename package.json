@@ -23,11 +23,24 @@
   },
   "dependencies": {
     "@shopify/hydrogen": "^1.6.5",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-query": "^3.39.2",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
-    "tw-elements": "^1.0.0-alpha13"
+    "tw-elements": "^1.0.0-alpha13",
+    "use-editable": "^2.3.3"
   },
-  "author": "Sarika"
+  "author": "Sarika",
+  "main": "hydrogen.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/squadcochin/mastermind-hydrogen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/squadcochin/mastermind-hydrogen/issues"
+  },
+  "homepage": "https://github.com/squadcochin/mastermind-hydrogen#readme"
 }

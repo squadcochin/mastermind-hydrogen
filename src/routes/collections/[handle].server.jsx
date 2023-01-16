@@ -9,8 +9,7 @@ import {
 import { Announcement } from "../../components/index";
 import Menu from "../../components/Global/menu.client";
 import { Layout } from "../../components/DynamicProduct/Layout.server";
-import ProductCard from "../../components/DynamicProduct/ProductCard.server";
-import { Suspense } from "react";
+import Filter from "../../components/DynamicProduct/Filter.client";
 
 export default function Collection() {
   const { handle } = useRouteParams();
@@ -43,14 +42,9 @@ export default function Collection() {
           {collection.title}
         </h1>
       </div>
-
-      <section className="w-full gap-4 md:gap-8 grid p-6 md:p-8 lg:p-12">
-        <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {collection.products.nodes.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-      </section>
+      <div>
+          <Filter name={collection.products.nodes}/>
+      </div>
     </Layout>
     </div>
   );
@@ -73,12 +67,17 @@ const QUERY = gql`
         height
         altText
       }
-      products(first: 8) {
+      products(first: 10) {
         nodes {
           id
           title
           publishedAt
           handle
+          priceRange {
+            minVariantPrice {
+              amount
+            }
+          }
           variants(first: 1) {
             nodes {
               id
