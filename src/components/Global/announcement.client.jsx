@@ -3,7 +3,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import './style.css';
 
-
 export function Announcement() {
   const content = [ "11 FREE SHIPPING* 123 on orders over $35 (shipped within Canada, some exceptions apply)","CURBSIDE PICK-UP available in as little as one hour!",
   "Get your gifts before the holidays!"];
