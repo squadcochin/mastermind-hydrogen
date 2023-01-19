@@ -17,7 +17,7 @@ export function Layout({ children }) {
 
   return (
     <>
-      <div className="flex flex-col min-h-screen antialiased bg-neutral-50">
+      <div className="flex flex-col min-h-screen antialiased">
         <main role="main" id="mainContent" className="flex-grow">
           {children}
         </main>

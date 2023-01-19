@@ -9,7 +9,7 @@ import {
 import { Announcement } from "../../components/index";
 import Menu from "../../components/Global/menu.client";
 import { Layout } from "../../components/DynamicProduct/Layout.server";
-import Filter from "../../components/DynamicProduct/Filter.client";
+import Filter from "../../components/DynamicProduct/ProductFilter.client";
 
 export default function Collection() {
   const { handle } = useRouteParams();
@@ -37,7 +37,7 @@ export default function Collection() {
     
     <Layout>
       
-      <div className="grid w-full gap-8 p-4 py-8 md:p-8 lg:p-12 justify-items-start">
+      <div className="grid w-full gap-8 p-4 py-8 md:p-8 justify-items-start">
         <h1 className="text-4xl whitespace-pre-wrap font-bold inline-block">
           {collection.title}
         </h1>
@@ -71,14 +71,20 @@ const QUERY = gql`
         nodes {
           id
           title
+          totalInventory
+          madeInCanada:metafield(namespace:"custom",key:"madeincanada"){
+            value
+            updatedAt
+          }
           publishedAt
+          vendor
           handle
           priceRange {
             minVariantPrice {
               amount
             }
           }
-          variants(first: 1) {
+          variants(first: 10) {
             nodes {
               id
               image {
