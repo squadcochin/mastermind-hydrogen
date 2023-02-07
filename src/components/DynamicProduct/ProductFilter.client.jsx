@@ -5,10 +5,10 @@ export default function ProductFilter(props) {
     const [sortOrder, setSortOrder] = useState("title");
     const [filters, setFilters] = useState({});
 
+
     const activeFilters = Object.keys(filters).filter((key) => filters[key]);    
     const sortedProducts = props.name;
-    
-  if (sortOrder === "title") {
+      if (sortOrder === "title") {
     sortedProducts.sort((a, b) => {
       const nameA = a.title.toUpperCase();
       const nameB = b.title.toUpperCase();
@@ -52,7 +52,7 @@ export default function ProductFilter(props) {
         <div>
             <div className="w-full gap-4 md:gap-8 grid md:px-8">
                 <Sort sortOrder={sortOrder} setSortOrder={setSortOrder} />
-                <Filter filters={filters} setFilters={setFilters} />
+                {/* <Filter filters={filters} setFilters={setFilters} /> */}
             </div>
             <section className="w-full gap-4 md:gap-8 grid p-6 md:p-8">
                 <div className="grid-flow-row grid gap-2 gap-y-6 md:gap-4 lg:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -64,7 +64,6 @@ export default function ProductFilter(props) {
                         <ProductCard key={product.id} product={product} />
                     ))}
                 </div>
-
                 
             </section>
       </div>
@@ -88,9 +87,11 @@ function Sort({ sortOrder, setSortOrder }) {
       </div>
     );
 }
+
 function Filter({ filters, setFilters }) {
   const handleFilterClick = (e) => {
     const newFilters = { ...filters };
+    
     newFilters[e.target.value] = e.target.checked;
     setFilters(newFilters);
   };
@@ -100,14 +101,22 @@ function Filter({ filters, setFilters }) {
 
   return (
     <p>
-      Filter:{' '}
-      <label className="mr-1">
+      Filter:{" "}
+      <label className="mr-1 cursor-pointer">
         <input
           type="checkbox"
-          value="madeInCanada"
+          value="available"
           onClick={handleFilterClick}
-        />{' '}
-        Women Author
+        />{" "}
+        Available
+      </label>
+      <label className="mr-1 cursor-pointer">
+        <input
+          type="checkbox"
+          value="sustainable"
+          onClick={handleFilterClick}
+        />{" "}
+        Out Of Stock
       </label>
     </p>
   );

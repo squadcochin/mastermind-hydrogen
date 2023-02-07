@@ -6,14 +6,14 @@ import Shopcategory from "../components/Shop-category/Shopcategory.client";
 import Bookbyage from "../components/Book_by_age/bookbyage.client";
 import Bannerslider from "../components/banner-slider/Bannerslider.client";
 import { Announcement, Footer } from "../components";
-import Menu from "../components/Global/Menu.client";
 import { Productslider } from "../components/Global/Productslider.client";
+import Menudisplay from "../components/Global/menudisplay.server";
 
 export default function Home() {
   return (
     <>
       <Announcement />
-      <Menu />
+      <Menudisplay/>
       <Bannerslider />
       <Shopcategory />
       <Productslider />

@@ -7,11 +7,12 @@ import {
   Seo,
 } from "@shopify/hydrogen";
 import { Announcement } from "../../components/index";
-import Menu from "../../components/Global/menu.client";
 import { Layout } from "../../components/DynamicProduct/Layout.server";
 import Filter from "../../components/DynamicProduct/ProductFilter.client";
+import Menudisplay from "../../components/Global/menudisplay.server";
 
 export default function Collection() {
+
   const { handle } = useRouteParams();
 
   const {
@@ -22,18 +23,17 @@ export default function Collection() {
       handle,
     },
   });
-
   useServerAnalytics({
     shopify: {
       pageType: ShopifyAnalyticsConstants.pageType.collection,
       resourceId: collection.id,
     },
+    
   });
-
   return (
     <div>
       <Announcement />
-      <Menu />
+      <Menudisplay />
     
     <Layout>
       
@@ -67,18 +67,22 @@ const QUERY = gql`
         height
         altText
       }
-      products(first: 10) {
+      products(first: 100) {
         nodes {
           id
           title
           totalInventory
-          madeInCanada:metafield(namespace:"custom",key:"madeincanada"){
+          available:metafield(namespace:"custom",key:"availability"){
             value
             updatedAt
           }
           publishedAt
           vendor
           handle
+          options{
+            name
+            values
+          }
           priceRange {
             minVariantPrice {
               amount
@@ -92,6 +96,10 @@ const QUERY = gql`
                 altText
                 width
                 height
+              }
+              selectedOptions{
+                name
+                value
               }
               priceV2 {
                 amount
